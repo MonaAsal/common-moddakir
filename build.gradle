@@ -28,5 +28,5 @@ ext {
     hilt_version="2.45"
     coil_version="2.2.2"
     datastore_version="1.0.0"
-    compose_version = '1.0.3'
+    compose_version = '1.5.30'
 }
