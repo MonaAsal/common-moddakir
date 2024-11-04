@@ -40,7 +40,7 @@ class VideoActivity : BaseActivity() {
     }
 
     private fun setupPlayer() {
-        val player = ExoPlayer.Builder(this).build()
+     /*   val player = ExoPlayer.Builder(this).build()
         binding.epVideoView.player = player
         // Build the media item.
         val mediaItem = MediaItem.fromUri(intent.extras!!.getString(URL, ""))
@@ -51,7 +51,7 @@ class VideoActivity : BaseActivity() {
         //4
         player.playWhenReady = true
         // Start the playback.
-        player.play()
+        player.play()*/
 
     }
 
