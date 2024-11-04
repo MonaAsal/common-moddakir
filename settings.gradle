@@ -1,11 +1,12 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
         google()
         mavenLocal()
         mavenCentral()
-        gradlePluginPortal()
         maven { url "https://jitpack.io" }
         maven { url "https://maven.google.com" }
+
         maven { url "D:\\androidApps\\quran\\repo"}
         maven {
             url "https://storage.googleapis.com/download.flutter.io"
@@ -18,6 +19,7 @@ pluginManagement {
 
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -40,4 +42,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ModdakirCommon"
 include ':common'
-include ':library'
+//include ':library'
+include ':commonLibrary'
