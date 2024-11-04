@@ -165,7 +165,7 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.4.1")
 
     //quran
-    implementation 'com.quran.module:flutter_debug:1.0'
+   // implementation 'com.quran.module:flutter_debug:1.0'
 
     //socket
     api 'io.socket:socket.io-client:2.0.1'

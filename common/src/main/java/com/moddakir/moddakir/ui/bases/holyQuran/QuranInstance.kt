@@ -1,5 +1,5 @@
 package com.moddakir.moddakir.ui.bases.holyQuran
-
+/*
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -104,4 +104,4 @@ object QuranInstance {
     }
 
 
-}
+}*/
