@@ -7,7 +7,6 @@ pluginManagement {
         maven { url "https://jitpack.io" }
         maven { url "https://maven.google.com" }
 
-        maven { url "D:\\androidApps\\quran\\repo"}
         maven {
             url "https://storage.googleapis.com/download.flutter.io"
         }
@@ -33,9 +32,6 @@ dependencyResolutionManagement {
         google()
         mavenLocal()
         mavenCentral()
-        maven {
-            url 'D:\\androidApps\\quran\\repo'
-        }
 
         maven {
             url "https://storage.googleapis.com/download.flutter.io"
