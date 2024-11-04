@@ -5,7 +5,6 @@ plugins {
     id "kotlin-kapt"
     id "kotlin-parcelize"
     id "androidx.navigation.safeargs.kotlin"
-    id 'maven-publish'
 }
 
 android {
@@ -244,14 +243,4 @@ kapt {
     correctErrorTypes = true
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId 'com.github.MonaAdelAsal'
-                artifactId 'common-moddakir'
-                version '1.0.0'
-            }
-        }
-    }
-}
+

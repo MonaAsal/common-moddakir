@@ -5,6 +5,7 @@ plugins {
     id "kotlin-kapt"
     id "kotlin-parcelize"
     id "androidx.navigation.safeargs.kotlin"
+    id 'maven-publish'
 }
 
 android {
@@ -163,7 +164,16 @@ dependencies {
     api 'io.socket:socket.io-client:2.0.1'
 
     api 'me.zhanghai.android.materialratingbar:library:1.4.0'
-
-
-
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId 'com.github.MonaAdelAsal'
+                artifactId 'common-moddakir'
+                version '1.0.0'
+            }
+        }
+    }
 }
