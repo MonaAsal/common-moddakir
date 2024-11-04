@@ -9,7 +9,6 @@ import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import com.example.moddakirapps.BuildConfig
 import com.example.moddakirapps.R
 import com.example.moddakirapps.databinding.ActivityAboutUsBinding
 import com.moddakir.moddakir.App.Companion.ColorPrimary
@@ -42,7 +41,7 @@ class AboutUsActivity : BaseActivity() {
         setContentView(binding.root)
         setAppColor()
         binding.toolbar.setTitle(resources.getString(R.string.about_moddakir))
-        binding.tvVersion.text = BuildConfig.VERSION_NAME
+        //binding.tvVersion.text = BuildConfig.VERSION_NAME
     }
 
 

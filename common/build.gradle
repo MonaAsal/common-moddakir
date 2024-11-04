@@ -1,10 +1,11 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.dagger.hilt.android'
     id "kotlin-kapt"
     id "kotlin-parcelize"
     id "androidx.navigation.safeargs.kotlin"
+    id 'maven-publish'
 }
 
 android {
@@ -18,7 +19,7 @@ android {
         namespace("com.example.moddakirapps")
     }
     defaultConfig {
-        applicationId "com.example.moddakirapps"
+
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -243,4 +244,15 @@ dependencies {
 kapt {
     correctErrorTypes = true
 }
-
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId 'com.github.MonaAdelAsal'
+                artifactId 'common-moddakir'
+                version '1.0.0'
+            }
+        }
+    }
+}
