@@ -15,11 +15,8 @@ android {
         viewBinding true
         dataBinding true
     }
-    if (project.android.hasProperty("namespace")) {
-        namespace("com.example.moddakirapps")
-    }
-    defaultConfig {
 
+    defaultConfig {
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -36,14 +33,6 @@ android {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
-    signingConfigs {
-        config {
-            keyAlias 'moddakir'
-            keyPassword 'arabdt123'
-            storeFile file('D:\\androidApps\\modakkir_android\\moddakir.jks')
-            storePassword 'arabdt123'
-        }
-    }
 
     buildTypes {
         release {
@@ -68,7 +57,6 @@ android {
                 }
             }
 
-            signingConfig signingConfigs.config
 
             shrinkResources false
             manifestPlaceholders = [BranchDebug: false]
@@ -87,7 +75,6 @@ android {
                 aaptOptions.cruncherEnabled = false
                 ext.alwaysUpdateBuildId = false
             }
-            signingConfig signingConfigs.config
             shrinkResources false
             buildConfigField "String", BASE_URL, "\"https://" + URLAPi + "/" + VersionPro + "/api/\""
             buildConfigField "String", SOCKET_URL, "\"https://" + SOCKETURL + "\""
@@ -238,11 +225,6 @@ dependencies {
 
     api 'me.zhanghai.android.materialratingbar:library:1.4.0'
 
-
-
-}
-kapt {
-    correctErrorTypes = true
 }
 afterEvaluate {
     publishing {
